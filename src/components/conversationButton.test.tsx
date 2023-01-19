@@ -5,7 +5,7 @@ import { Conversation } from "../types";
 import { vi } from "vitest";
 import userEvent from "@testing-library/user-event";
 
-describe("App", () => {
+describe("ConversationButton", () => {
   it("renders the chat number", () => {
     render(
       <ConversationButton
