@@ -13,8 +13,11 @@ export const ConversationButton = ({
   chatNumber,
 }: ConversationButtonProps) => {
   return (
-    <p onClick={() => openConversationHandler(conversation)}>
+    <button
+      className="text-blue-500 font-bold uppercase p-3 m-3 block"
+      onClick={() => openConversationHandler(conversation)}
+    >
       Conversation {chatNumber}
-    </p>
+    </button>
   );
 };
