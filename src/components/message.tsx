@@ -6,8 +6,12 @@ interface MessageProps {
 export const Message = ({ lastUpdated, text }: MessageProps) => {
   return (
     <div className="mb-3">
-      <p data-testid="message-last-updated">{lastUpdated}</p>
-      <p>{text}</p>
+      <p className="font-light text-gray-500 dark:text-gray-400 text-xl	">
+        {lastUpdated}
+      </p>
+      <p className="text-lg font-medium text-gray-900 dark:text-white">
+        {text}
+      </p>
     </div>
   );
 };
