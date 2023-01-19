@@ -3,6 +3,7 @@ import { ConversationButton } from "./components/conversationButton";
 import { Conversation } from "./types";
 import { sortByLastUpdated } from "./helpers/sortByLastUpdated";
 import { Message } from "./components/message";
+import { formatDate } from "./helpers/formatDate";
 
 function App() {
   const [conversations, setConversations] = useState<Conversation[]>([]);
@@ -38,7 +39,7 @@ function App() {
         return (
           <Message
             key={message.id}
-            lastUpdated={message.last_updated}
+            lastUpdated={formatDate(message.last_updated)}
             text={message.text}
           />
         );

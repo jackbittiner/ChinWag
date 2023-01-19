@@ -45,13 +45,13 @@ describe("App", () => {
     const lastUpdatedElements = screen.getAllByTestId("message-last-updated");
 
     expect(
-      within(lastUpdatedElements[0]).getByText("2020-02-24T03:21:14")
+      within(lastUpdatedElements[0]).getByText("February 24th 2020, 03:21:14")
     ).toBeInTheDocument();
     expect(
-      within(lastUpdatedElements[1]).getByText("2020-05-14T12:24:10")
+      within(lastUpdatedElements[1]).getByText("May 14th 2020, 12:24:10")
     ).toBeInTheDocument();
     expect(
-      within(lastUpdatedElements[2]).getByText("2020-07-13T12:50:37")
+      within(lastUpdatedElements[2]).getByText("July 13th 2020, 12:50:37")
     ).toBeInTheDocument();
   });
 });
