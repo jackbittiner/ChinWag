@@ -49,7 +49,8 @@ So green! (hopefully)
 **Mock Service Worker (MSW)** - An API mocking library. It's amazing for local development and testing. If you'd like to
 learn more I wrote [this nifty blog](https://medium.com/cazoo/mock-service-worker-in-the-browser-7e4033a25d8b) on how to
 set it up. I first discovered it from [this even niftier blog](https://kentcdodds.com/blog/stop-mocking-fetch) from Kent
-C Dodds.
+C Dodds. In this project I'm using the service worker to intercept calls to a `/getConversation` endpoint and using a
+mock server in my tests which you can find at `./src/mocks/server.ts`
 
 **Vite** - This was my first time using Vite to start a new React project and I would highly recommend it. It's so quick
 and the
