@@ -16,20 +16,20 @@ function App() {
     fetchData();
   }, []);
 
+  const conversationsToRender = conversations.map((conversation, index) => {
+    return (
+      <ConversationButton
+        key={conversation.id}
+        conversation={conversation}
+        openConversationHandler={setOpenConversation}
+        chatNumber={index + 1}
+      />
+    );
+  });
+
   return (
     <div className="flex">
-      <div>
-        {conversations.map((conversation, index) => {
-          return (
-            <ConversationButton
-              key={conversation.id}
-              conversation={conversation}
-              openConversationHandler={setOpenConversation}
-              chatNumber={index + 1}
-            />
-          );
-        })}
-      </div>
+      <div>{conversationsToRender}</div>
     </div>
   );
 }
