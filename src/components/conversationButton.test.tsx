@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 
 import { ConversationButton } from "./conversationButton";
-import { Conversation } from "../App";
+import { Conversation } from "../types";
 import { vi } from "vitest";
 import userEvent from "@testing-library/user-event";
 

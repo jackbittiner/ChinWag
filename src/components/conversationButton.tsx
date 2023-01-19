@@ -1,5 +1,5 @@
 import { SetStateAction } from "react";
-import { Conversation } from "../App";
+import { Conversation } from "../types";
 
 interface ConversationButtonProps {
   conversation: Conversation;

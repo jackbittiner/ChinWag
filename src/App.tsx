@@ -1,25 +1,12 @@
 import { useEffect, useState } from "react";
 import { ConversationButton } from "./components/conversationButton";
-
-export interface Conversation {
-  id: string;
-  name: string;
-  last_updated: string;
-  messages: Message[];
-}
-
-interface Message {
-  id: string;
-  text: string;
-  last_updated: string;
-}
+import { Conversation } from "./types";
 
 function App() {
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [openConversation, setOpenConversation] = useState<Conversation | null>(
     null
   );
-
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("/getConversations");
@@ -28,6 +15,7 @@ function App() {
     };
     fetchData();
   }, []);
+
   return (
     <div className="flex">
       <div>
